@@ -1,1 +1,20 @@
-# gool.html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Like Database</title>
+</head>
+<body>
+    <script id="likes-db">
+        // هذا القسم هو الذي سيقوم التطبيق بقراءته وتحديثه
+        window.likesData = {
+            "post_default": 0
+        };
+    </script>
+    <div id="status">Database Active</div>
+
+    <script>
+        // كود بسيط لعرض البيانات للمعاينة فقط إذا فتحت الرابط في المتصفح
+        document.getElementById('status').innerText = JSON.stringify(window.likesData);
+    </script>
+</body>
+</html>
